@@ -1,0 +1,21 @@
+<!--
+In this tutorial we will show you how to use directives with data models.
+What we are going to do is to have an HTML form asking people to type in
+their names and build a data model behind the scene and dynamically
+print that onto the HTML Page
+-->
+<!DOCTYPE html>
+<html ng-app>
+  <!-- The use of ng-app over here is basically decalring that this is an angular app-->
+<head>
+	<title> Using AngularJS Directives and Data Binding</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+</head>
+<body>
+  Name: 
+  <br/>
+  <!-- This is how you build a data model behind the scene -->
+  <input type = "text" ng-model = "name"/> {{name}} 
+
+</body>
+</html>
