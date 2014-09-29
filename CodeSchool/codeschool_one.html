@@ -16,9 +16,18 @@
 		 within a div and display the data within the controller. NOw in here reference the object by its
 		 attribute just as you would refernce any other attribute.  -->
 		 <div ng-controller = 'StoreController as store'>
-		 	<h1> {{store.product.name}}</h1>
-		 	<h2>${{store.product.price}}</h2>
-		 	<h3>{{store.product.desc}}</h3>
+		 <!-- 9 Now lets iterate throught the list of the stuff here to make sure that everything gets displayed-->
+		 <div ng-repeat = "gemStones in store.product">
+		 <div ng-hide = "gemStones.soldout">
+		 	<h1> {{gemStones.name}}</h1>
+		 	<h2>${{gemStones.price}}</h2>
+		 	<h3>{{gemStones.desc}}</h3>
+		 	<!-- However I want the button to show up only in canpurchase attribute is true-->
+		 	<!-- 6 So, we use the ng-show directive. What this does is it triggers the element only if the value of the expression is true -->
+		 	<button ng-show = "gemStones.canpurchase"> Add to Cart </button>
+		 	<!--8 Now, lets use the attribute Sold OUt if soldout is true, we don't want to show the product on the page at all so we go ahead and define the div inside the StoreController directive controller. 
+		 	We can however, use the ng-hide directive here-->
+		 </div>
 		 </div>
 	</body>
 </html>

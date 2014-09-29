@@ -16,6 +16,14 @@ app.controller('StoreController', function(){
  this.product = gem;
 });
 //4Now lets make a gem
-
-var gem = { name : 'Unobtainum', price : 20000, desc : "Found on the planet of Pandora, Unobtainum is used to make clean energy"};
+//5 Lets add another property to the gem called canpurchase. 
+//Now lets add the property to the gem called soldout
+//Now lets add a few more elements to the cart. 
+var gem = [{ name : 'Unobtainum', price : 20000, desc : "Found on the planet of Pandora, Unobtainum is used to make clean energy", 
+canpurchase : true, soldout : false}, 
+			{ name : 'Californix', price : 2900000, desc : "Extracts from the California region on the Mother Planet. Extremely rare. ", 
+canpurchase : false, soldout : true}, 
+{ name : 'Burgium', price : 29, desc : "Used to make burgers", 
+canpurchase : false, soldout : false}
+];
 })();
