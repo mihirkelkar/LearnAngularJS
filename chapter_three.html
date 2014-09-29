@@ -27,7 +27,7 @@ by and what not.
     -->
   <ul>
   	<li ng-repeat = "cust in customers | filter:nameText | orderBy: 'name'">
-		{{cust.name}} - {{cust.city}}	
+		{{cust.name | uppercase}} - {{cust.city | lowercase}}	
   	</li>
   </ul>
 </body>

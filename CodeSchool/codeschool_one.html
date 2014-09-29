@@ -1,0 +1,24 @@
+<!--2 Mark up the app as an ng-app = 'store' signifying that this is the store app-->
+<!-- This basically means, run this module when the document loads. -->
+
+<!-- 3 Now we are going to learn about controllers, controllers help us get data onto the page-->
+<html ng-app = 'store'>
+	<head>
+		<title>
+			Code school example Number One
+		</title>
+		<!-- CSS For twitter Bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">	</head>
+	<body>
+		<script type="text/javascript" src = "angular.min.js"></script>
+		<script type="text/javascript" src = "app.js"></script>
+		<!--5 Now that we have defined the StorecController. Lets reference this controller from
+		 within a div and display the data within the controller. NOw in here reference the object by its
+		 attribute just as you would refernce any other attribute.  -->
+		 <div ng-controller = 'StoreController as store'>
+		 	<h1> {{store.product.name}}</h1>
+		 	<h2>${{store.product.price}}</h2>
+		 	<h3>{{store.product.desc}}</h3>
+		 </div>
+	</body>
+</html>
